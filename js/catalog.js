@@ -4,7 +4,7 @@ Fisica.topics = [
     label: "Inércia",
     kicker: "Primeira lei · Newton",
     simplify: "O gelo representa um lugar quase sem força. Com o atrito ligado, ele passa a ser a única força horizontal.",
-    icon: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="16" fill="var(--sky)"/><path d="M4 22h24" stroke="var(--sky-deep)" stroke-width="2" stroke-dasharray="2 2"/><ellipse cx="14" cy="18" rx="6" ry="3" fill="var(--hair)"/></svg>'
+    icon: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="16" fill="var(--sky)"/><path d="M4 22h24" stroke="var(--sky-deep)" stroke-width="2" stroke-dasharray="2 2"/><ellipse cx="14" cy="18" rx="6" ry="3" fill="var(--ink)"/></svg>'
   },
   {
     id: "newton2",
@@ -25,7 +25,7 @@ Fisica.topics = [
     label: "Queda livre",
     kicker: "Queda livre · Galileu",
     simplify: "Sem ar, os dois caem com g = 10 m/s². Com ar, o objeto leve sente mais o arrasto.",
-    icon: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="16" fill="var(--sky)"/><circle cx="11" cy="14" r="5" fill="var(--force)"/><path d="M11 8 q2-3 1-5" stroke="var(--grass-dark)" stroke-width="1.4" fill="none"/><circle cx="21" cy="16" r="4" fill="var(--hair)"/></svg>'
+    icon: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="16" fill="var(--sky)"/><circle cx="11" cy="14" r="5" fill="var(--force)"/><path d="M11 8 q2-3 1-5" stroke="var(--grass-dark)" stroke-width="1.4" fill="none"/><circle cx="21" cy="16" r="4" fill="var(--ink)"/></svg>'
   },
   {
     id: "gravidade",

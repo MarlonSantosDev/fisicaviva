@@ -43,7 +43,7 @@ Fisica.sims.onda = (function () {
         var d = path(phase);
         document.getElementById("on-rope").setAttribute("d", d);
         var yHand = 150 + amp * Math.sin(-phase);
-        document.getElementById("on-arm").setAttribute("d", "M90 158 Q124 " + yHand.toFixed(1) + " 156 " + yHand.toFixed(1));
+        document.getElementById("on-arm").setAttribute("d", "M90 178 Q122 " + yHand.toFixed(1) + " 156 " + yHand.toFixed(1));
         document.getElementById("on-a").textContent = Fisica.fmt(amp);
         document.getElementById("on-f").textContent = String(waves);
         ctx.explain.textContent = "Efeito: a mão sobe e desce e a corda copia esse movimento mais adiante. A amplitude é " + Fisica.fmt(amp) + ": é quanto cada ponto sobe acima do meio. Na corda cabem " + waves + (waves === 1 ? " onda. " : " ondas. ") + "Cada pedaço da corda só vai para cima e para baixo. Quem anda para a direita é o formato, a crista. Mais ondas na mesma corda significam comprimento menor; a velocidade da onda é comprimento vezes frequência.";

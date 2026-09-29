@@ -24,8 +24,10 @@ Fisica.sims.energia = (function () {
         '<polygon points="80,210 460,210 460,70" fill="var(--grass)"/>' +
         '<rect y="208" width="720" height="52" fill="var(--wood)"/>' +
         '<g id="en-block"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="var(--orange)"/></g>' +
+        '<text x="554" y="62" text-anchor="middle" font-size="14" fill="var(--ink)">Ep</text>' +
         '<rect x="540" y="70" width="28" height="120" rx="8" fill="var(--card)"/>' +
         '<rect id="en-ep" x="544" width="20" rx="4" fill="var(--orange)"/>' +
+        '<text x="614" y="62" text-anchor="middle" font-size="14" fill="var(--ink)">Ec</text>' +
         '<rect x="600" y="70" width="28" height="120" rx="8" fill="var(--card)"/>' +
         '<rect id="en-ec" x="604" width="20" rx="4" fill="var(--accel)"/>' +
         "</svg>";
@@ -36,8 +38,11 @@ Fisica.sims.energia = (function () {
 
       function paint() {
         var e = energies();
-        var px = 80 + u * (460 - 80);
-        var py = 210 + u * (70 - 210);
+        var run = 380;
+        var rise = -140;
+        var len = Math.sqrt(run * run + rise * rise);
+        var px = 80 + u * run + (rise / len) * 22;
+        var py = 210 + u * rise + (-run / len) * 22;
         document.getElementById("en-block").setAttribute("transform", "translate(" + px.toFixed(1) + " " + py.toFixed(1) + ") rotate(20)");
         var hEp = (e.ep / e.total) * 104;
         var hEc = (e.ec / e.total) * 104;

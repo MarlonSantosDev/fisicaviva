@@ -47,7 +47,7 @@ Fisica.sims.newton2 = (function () {
         '<g id="n2-accel"><rect id="n2-as" y="78" height="8" rx="4" fill="var(--accel)"/><polygon id="n2-ah" fill="var(--accel)"/><text id="n2-al" y="86" font-size="20" fill="var(--ink)">a</text></g>' +
         '<g id="n2-pessoa">' + Fisica.person("var(--orange)") + "</g>" +
         '<g id="n2-caixa" hidden><ellipse cx="0" cy="198" rx="34" ry="6" fill="var(--ink)" opacity="0.15"/><rect x="-32" y="132" width="64" height="64" rx="6" fill="var(--sun)"/><path d="M-32 132 L0 152 L32 132" fill="none" stroke="var(--card)" stroke-width="3"/><path d="M0 152 V196" stroke="var(--card)" stroke-width="3"/></g>' +
-        '<g id="n2-bola" hidden><ellipse cx="0" cy="192" rx="18" ry="5" fill="var(--ink)" opacity="0.15"/><circle cy="170" r="22" fill="var(--cloud)" stroke="var(--force)" stroke-width="3"/><path d="M-18 162 Q0 176 18 158" fill="none" stroke="var(--force)" stroke-width="3"/><path d="M-16 178 Q0 166 16 184" fill="none" stroke="var(--force)" stroke-width="3"/></g>' +
+        '<g id="n2-bola" hidden><ellipse cx="0" cy="200" rx="18" ry="5" fill="var(--ink)" opacity="0.15"/><circle cy="178" r="22" fill="var(--cloud)" stroke="var(--force)" stroke-width="3"/><path d="M-18 170 Q0 184 18 166" fill="none" stroke="var(--force)" stroke-width="3"/><path d="M-16 186 Q0 174 16 192" fill="none" stroke="var(--force)" stroke-width="3"/></g>' +
         '<g id="n2-carro" hidden><ellipse cy="198" rx="70" ry="6" fill="var(--ink)" opacity="0.15"/>' +
         '<g transform="translate(-40 182)"><g id="n2-wl"><circle r="16" fill="var(--hair)"/><circle r="7" fill="var(--card)"/><path d="M0-12v24M-12 0h24" stroke="var(--card)" stroke-width="2"/></g></g>' +
         '<g transform="translate(42 182)"><g id="n2-wr"><circle r="16" fill="var(--hair)"/><circle r="7" fill="var(--card)"/><path d="M0-12v24M-12 0h24" stroke="var(--card)" stroke-width="2"/></g></g>' +
@@ -102,7 +102,8 @@ Fisica.sims.newton2 = (function () {
         if (alen === 0) ag.setAttribute("hidden", "");
         else ag.removeAttribute("hidden");
         var sign = dir;
-        var head = -sign * 32;
+        var reach = { pessoa: 36, caixa: 44, bola: 36, carro: 96 };
+        var head = -sign * reach[obj];
         var tail = head - sign * flen;
         var shaftX = Math.min(head, tail);
         document.getElementById("n2-fs").setAttribute("x", String(shaftX));
