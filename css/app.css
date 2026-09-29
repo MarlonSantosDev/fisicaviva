@@ -66,6 +66,11 @@ button { cursor: pointer; }
 
 .kicker { color: var(--muted); font-size: 0.92rem; }
 
+.lead {
+  max-width: 62ch;
+  margin: -8px 0 16px;
+}
+
 .topics {
   display: flex;
   flex-wrap: wrap;
@@ -203,6 +208,51 @@ button { cursor: pointer; }
 
 .simplify { color: var(--muted); }
 
+.topics-index { margin-top: 28px; }
+
+.topics-index h2 { margin-bottom: 10px; }
+
+.topics-index h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.topics-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.topics-index li {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+}
+
+.topics-index a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.topics-index a[aria-current="page"] { color: var(--force); }
+
+.topics-index p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-foot {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .static-eq,
 .explain,
 .pill {
@@ -223,6 +273,10 @@ button { cursor: pointer; }
 
 @media (min-width: 481px) and (max-width: 1024px) {
   body { padding: 22px 20px 40px; }
+}
+
+@media (min-width: 720px) {
+  .topics-index ul { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 1025px) {

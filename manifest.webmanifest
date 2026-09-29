@@ -1,0 +1,19 @@
+{
+  "name": "Física viva",
+  "short_name": "Física viva",
+  "description": "Animações interativas para aprender as leis de Newton, queda livre, gravidade, energia mecânica, ondas e a lei de Ohm.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e6",
+  "theme_color": "#c2412a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

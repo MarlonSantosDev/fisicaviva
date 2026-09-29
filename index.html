@@ -3,7 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Física viva</title>
+  <title>Física viva — animações das leis da física</title>
+  <meta name="description" content="Animações interativas para aprender as leis de Newton, queda livre, gravidade, energia mecânica, ondas e a lei de Ohm.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="author" content="Física viva">
+  <meta name="theme-color" content="#c2412a">
+  <link rel="canonical" href="./">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Física viva">
+  <meta property="og:title" content="Física viva — animações das leis da física">
+  <meta property="og:description" content="Animações interativas para aprender as leis de Newton, queda livre, gravidade, energia mecânica, ondas e a lei de Ohm.">
+  <meta property="og:url" content="./">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Física viva — animações das leis da física">
+  <meta name="twitter:description" content="Animações interativas para aprender as leis de Newton, queda livre, gravidade, energia mecânica, ondas e a lei de Ohm.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Física viva",
+    "description": "Animações interativas para aprender as leis de Newton, queda livre, gravidade, energia mecânica, ondas e a lei de Ohm.",
+    "inLanguage": "pt-BR",
+    "learningResourceType": "Simulação interativa",
+    "educationalLevel": "Ensino fundamental e médio",
+    "isAccessibleForFree": true,
+    "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "student"
+    },
+    "teaches": [
+      "Primeira lei de Newton",
+      "Segunda lei de Newton",
+      "Terceira lei de Newton",
+      "Queda livre",
+      "Gravitação universal",
+      "Energia mecânica",
+      "Ondas mecânicas",
+      "Lei de Ohm"
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      var page = new URL("./", location.href).href;
+      var canon = document.querySelector('link[rel="canonical"]');
+      if (canon) canon.href = page;
+      var og = document.querySelector('meta[property="og:url"]');
+      if (og) og.setAttribute("content", page);
+    })();
+  </script>
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -19,6 +71,7 @@
       <p class="kicker" id="kicker">Segunda lei · Newton</p>
     </div>
   </header>
+  <p class="lead">Animações para ver as leis da física em ação: inércia, força e aceleração, ação e reação, queda livre, gravidade, energia, ondas e a lei de Ohm.</p>
   <nav class="topics" id="topics" aria-label="Temas"></nav>
   <main>
     <div class="stage" id="stage"></div>
@@ -30,7 +83,47 @@
       <p class="simplify" id="simplify"></p>
     </section>
   </main>
-  <noscript>Ative o JavaScript para ver as animações.</noscript>
+  <section class="topics-index" aria-labelledby="index-title">
+    <h2 id="index-title">Temas</h2>
+    <ul>
+      <li data-topic="inercia">
+        <h3><a href="#inercia">Inércia</a></h3>
+        <p>Primeira lei de Newton: sem força resultante, o corpo parado continua parado e o que se move segue em linha reta.</p>
+      </li>
+      <li data-topic="newton2">
+        <h3><a href="#newton2">Segunda lei</a></h3>
+        <p>Segunda lei de Newton: a força resultante é a massa vezes a aceleração, F = m·a.</p>
+      </li>
+      <li data-topic="acao">
+        <h3><a href="#acao">Ação e reação</a></h3>
+        <p>Terceira lei de Newton: a ação e a reação têm o mesmo tamanho, sentidos opostos e agem em corpos diferentes.</p>
+      </li>
+      <li data-topic="queda">
+        <h3><a href="#queda">Queda livre</a></h3>
+        <p>Queda livre, de Galileu: sem ar, os corpos caem juntos com a mesma aceleração. Com ar, o mais leve sofre mais arrasto.</p>
+      </li>
+      <li data-topic="gravidade">
+        <h3><a href="#gravidade">Gravidade</a></h3>
+        <p>Gravitação de Newton: duas massas se atraem com forças iguais. A força cresce com as massas e cai com a distância.</p>
+      </li>
+      <li data-topic="energia">
+        <h3><a href="#energia">Energia</a></h3>
+        <p>Energia mecânica: numa rampa sem atrito, a energia potencial vira cinética e a soma das duas se conserva.</p>
+      </li>
+      <li data-topic="onda">
+        <h3><a href="#onda">Onda</a></h3>
+        <p>Onda mecânica: cada ponto da corda só sobe e desce. O que caminha ao longo da corda é a forma da onda.</p>
+      </li>
+      <li data-topic="ohm">
+        <h3><a href="#ohm">Lei de Ohm</a></h3>
+        <p>Lei de Ohm: a corrente é a tensão dividida pela resistência, I = V / R. Mais tensão acende; mais resistência apaga.</p>
+      </li>
+    </ul>
+  </section>
+  <footer class="site-foot">
+    <p>Física viva é um material visual e gratuito para estudar física.</p>
+  </footer>
+  <noscript>Ative o JavaScript para ver as animações. Os textos de cada tema continuam nesta página.</noscript>
   <script src="js/util.js"></script>
   <script src="js/catalog.js"></script>
   <script src="js/sim/inercia.js"></script>

@@ -41,6 +41,18 @@
     });
     document.getElementById("kicker").textContent = topic.kicker;
     document.title = topic.kicker + " · Física viva";
+    ["og:title", "twitter:title"].forEach(function (name) {
+      var meta = document.querySelector(name.indexOf("og:") === 0
+        ? 'meta[property="' + name + '"]'
+        : 'meta[name="' + name + '"]');
+      if (meta) meta.setAttribute("content", document.title);
+    });
+    document.querySelectorAll(".topics-index [data-topic]").forEach(function (item) {
+      var link = item.querySelector("a");
+      if (!link) return;
+      if (item.getAttribute("data-topic") === topic.id) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
     ctx.stage.innerHTML = "";
     ctx.formula.innerHTML = "";
     ctx.controls.innerHTML = "";
